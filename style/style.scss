@@ -7,7 +7,6 @@
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -18,5 +17,41 @@ body {
   }
   ul {
     list-style: none;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    padding: 2rem;
+  }
+}
+
+#logo {
+  color: black;
+}
+
+.search-form {
+  padding: 2rem;
+  display: flex;
+
+  input {
+    font-size: 2rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    border: 2px solid rgb(74, 68, 131);
+  }
+  button {
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: rgb(74, 68, 131);
+    color: white;
+    cursor: pointer;
   }
 }
