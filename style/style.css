@@ -1,1 +1,25 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body ul {
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */
