@@ -74,6 +74,7 @@ header {
 .search-form {
   padding: 2rem;
   display: flex;
+  width: 60%;
 
   input {
     font-size: 1.5rem;
@@ -84,8 +85,8 @@ header {
   }
   button {
     border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1.3rem;
+    padding: 0.5rem 2rem;
+    font-size: 3rem;
     font-weight: medium;
     background: $gold;
     color: black;
@@ -191,7 +192,7 @@ a {
     }
     button {
       width: 20%;
-      font-size: 1rem;
+      font-size: 1.5rem;
       padding: 0.5rem;
     }
   }
