@@ -42,6 +42,41 @@ header {
   text-align: center;
   color: $gold;
   font-size: 3rem;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  &:hover {
+    &::after {
+      right: 0;
+    }
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+#logo::after {
+  position: absolute;
+  bottom: -5%;
+  right: 100%;
+  content: " ";
+  width: 100%;
+  height: 0.5rem;
+  display: inline-block;
+  background: $gold;
+  transition: all 0.3s ease-in-out;
+}
+#logo::before {
+  position: absolute;
+  top: -5%;
+  left: 100%;
+  content: " ";
+  width: 100%;
+  height: 0.5rem;
+  display: inline-block;
+  background: $gold;
+  transition: all 0.3s ease-in-out;
 }
 
 .search-form {
@@ -57,11 +92,18 @@ header {
   }
   button {
     border: none;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: medium;
     background: $gold;
     color: black;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      border: 1px solid $gold;
+      background: black;
+      color: $gold;
+    }
   }
 }
 
@@ -124,6 +166,15 @@ a {
   font-size: 1.2rem;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border: 1px solid $gold;
+    background: black;
+    color: $gold;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 @media (max-width: 900px) {
@@ -139,10 +190,17 @@ a {
     }
     button {
       width: 20%;
+      font-size: 1rem;
+      padding: 0.5rem;
     }
   }
 
   .gallery {
     width: 70%;
+  }
+
+  #logo::after,
+  #logo::before {
+    height: 0.3rem;
   }
 }

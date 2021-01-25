@@ -49,6 +49,44 @@ header h2 {
   text-align: center;
   color: #e9c08a;
   font-size: 3rem;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#logo:hover::after {
+  right: 0;
+}
+
+#logo:hover::before {
+  left: 0;
+}
+
+#logo::after {
+  position: absolute;
+  bottom: -5%;
+  right: 100%;
+  content: " ";
+  width: 100%;
+  height: 0.5rem;
+  display: inline-block;
+  background: #e9c08a;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#logo::before {
+  position: absolute;
+  top: -5%;
+  left: 100%;
+  content: " ";
+  width: 100%;
+  height: 0.5rem;
+  display: inline-block;
+  background: #e9c08a;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .search-form {
@@ -68,11 +106,20 @@ header h2 {
 
 .search-form button {
   border: none;
-  padding: 0.5rem;
-  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: medium;
   background: #e9c08a;
   color: black;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-form button:hover {
+  border: 1px solid #e9c08a;
+  background: black;
+  color: #e9c08a;
 }
 
 .gallery-info {
@@ -156,6 +203,19 @@ a {
   font-size: 1.2rem;
   cursor: pointer;
   font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.more:hover {
+  border: 1px solid #e9c08a;
+  background: black;
+  color: #e9c08a;
+}
+
+.more:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 @media (max-width: 900px) {
@@ -172,9 +232,15 @@ a {
   }
   .search-form button {
     width: 20%;
+    font-size: 1rem;
+    padding: 0.5rem;
   }
   .gallery {
     width: 70%;
+  }
+  #logo::after,
+  #logo::before {
+    height: 0.3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
