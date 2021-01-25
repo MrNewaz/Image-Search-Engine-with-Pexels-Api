@@ -12,10 +12,12 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  background: black;
 }
 
 body a {
   text-decoration: none;
+  color: #e9c08a;
 }
 
 body ul {
@@ -44,7 +46,9 @@ header h2 {
 }
 
 #logo {
-  color: black;
+  text-align: center;
+  color: #e9c08a;
+  font-size: 3rem;
 }
 
 .search-form {
@@ -59,15 +63,15 @@ header h2 {
   padding: 0.5rem;
   width: 100%;
   border: none;
-  border: 2px solid #4a4483;
+  border: 2px solid #e9c08a;
 }
 
 .search-form button {
   border: none;
   padding: 0.5rem;
   font-size: 1rem;
-  background: #4a4483;
-  color: white;
+  background: #e9c08a;
+  color: black;
   cursor: pointer;
 }
 
@@ -85,10 +89,6 @@ header h2 {
   padding: 0.5rem 0rem;
 }
 
-.gallery-info a {
-  color: gray;
-}
-
 .gallery {
   width: 90%;
   margin: auto;
@@ -102,11 +102,37 @@ header h2 {
           column-gap: 3rem;
 }
 
+p,
+a {
+  color: #e9c08a;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-img:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.gallery-img:hover p,
+.gallery-img:hover a {
+  -webkit-transform: translateY(-120%) scale(1.1);
+          transform: translateY(-120%) scale(1.1);
+}
+
+.gallery-img:hover p:hover,
+.gallery-img:hover a:hover {
+  -webkit-transform: translateY(-120%) scale(1.3);
+          transform: translateY(-120%) scale(1.3);
+}
+
 .gallery-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-button {
@@ -129,5 +155,25 @@ header h2 {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  #logo {
+    font-size: 2rem;
+  }
+  .search-form {
+    width: 90%;
+    margin: auto;
+  }
+  .search-form input {
+    width: 80%;
+    font-size: 1rem;
+  }
+  .search-form button {
+    width: 20%;
+  }
+  .gallery {
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
