@@ -55,14 +55,6 @@ header h2 {
   display: inline-block;
 }
 
-#logo:hover::after {
-  right: 0;
-}
-
-#logo:hover::before {
-  left: 0;
-}
-
 #logo::after {
   position: absolute;
   bottom: -5%;
@@ -72,8 +64,7 @@ header h2 {
   height: 0.5rem;
   display: inline-block;
   background: #e9c08a;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  animation: before 2s ease-in-out infinite alternate-reverse;
 }
 
 #logo::before {
@@ -85,8 +76,8 @@ header h2 {
   height: 0.5rem;
   display: inline-block;
   background: #e9c08a;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-animation: before 2s ease-in-out infinite alternate;
+          animation: before 2s ease-in-out infinite alternate;
 }
 
 .search-form {
@@ -216,6 +207,24 @@ a {
 .more:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+@-webkit-keyframes before {
+  from {
+    left: 130%;
+  }
+  to {
+    left: -130%;
+  }
+}
+
+@keyframes before {
+  from {
+    left: 130%;
+  }
+  to {
+    left: -130%;
+  }
 }
 
 @media (max-width: 900px) {

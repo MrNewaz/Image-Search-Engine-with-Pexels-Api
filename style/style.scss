@@ -46,14 +46,6 @@ header {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  &:hover {
-    &::after {
-      right: 0;
-    }
-    &::before {
-      left: 0;
-    }
-  }
 }
 
 #logo::after {
@@ -65,7 +57,7 @@ header {
   height: 0.5rem;
   display: inline-block;
   background: $gold;
-  transition: all 0.3s ease-in-out;
+  animation: before 2s ease-in-out infinite alternate-reverse;
 }
 #logo::before {
   position: absolute;
@@ -76,7 +68,7 @@ header {
   height: 0.5rem;
   display: inline-block;
   background: $gold;
-  transition: all 0.3s ease-in-out;
+  animation: before 2s ease-in-out infinite alternate;
 }
 
 .search-form {
@@ -174,6 +166,15 @@ a {
   }
   &:active {
     transform: scale(0.95);
+  }
+}
+
+@keyframes before {
+  from {
+    left: 130%;
+  }
+  to {
+    left: -130%;
   }
 }
 
