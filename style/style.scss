@@ -118,11 +118,12 @@ a {
 
 .more {
   padding: 1rem 3rem;
-  background: rgb(74, 68, 131);
-  color: white;
+  background: $gold;
+  color: black;
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  font-weight: bold;
 }
 
 @media (max-width: 900px) {

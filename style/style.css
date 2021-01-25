@@ -150,11 +150,12 @@ a {
 
 .more {
   padding: 1rem 3rem;
-  background: #4a4483;
-  color: white;
+  background: #e9c08a;
+  color: black;
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  font-weight: bold;
 }
 
 @media (max-width: 900px) {
